@@ -1,0 +1,1300 @@
+// wap week number and print week day
+void main()
+{
+	int week_num=0;
+	printf("Enter week number");
+	scanf("%d",&week_num);
+	if(week_num==1)
+	{
+		printf("Sunday");
+	}
+	else if(week_num==2)
+	{
+		printf("monday");
+	 }
+	else if(week_num==3)
+	{
+		printf("Tuesday");
+	}
+	else if(week_num==7)
+	{
+		printf("saturday");
+	}
+	else
+	{
+		printf("invalid week number");
+	}
+}
+===================================================================
+WAP to check given number is even or odd
+
+void main()
+{
+	int num=0;
+	printf("Enter number to check even or odd");
+	scanf("%d",&num);
+	if(num%2==0)
+	{
+		printf("%d is even number",num);
+	}
+	else
+	{
+		printf("%d is odd number",num);
+	}
+	
+}
+=============================================================
+
+WAP to accept basic and find gross salary
+
+if basic<=10000  hra is 80% and da is 20%
+basic 10000-20000  hra is 85% and da is 30%
+basic >20000   hra is 90% and da is 40%
+
+void main()
+{
+	float bs=0,hra=0,da=0,gs=0;
+	printf("Enter basic salary");
+	scanf("%f",&bs);
+	if(bs<=10000)
+	{
+		hra=(bs/100)*80;
+		da=(bs/100)*20;
+	}
+	else if(bs<=20000)
+	{
+		hra=(bs/100)*85;
+		da=(bs/100)*25;
+	}
+	else
+	{
+	hra=(bs/100)*90;
+		da=(bs/100)*30;	
+	}
+	gs=bs+hra+da;
+	printf("Gross salary: %f \n",gs);
+	
+}
+==========================================================
+WAP to accept two numbers and print big number
+void main()
+{
+  int num1=0,num2=0;
+  printf("Enter num1 and num2 values");
+  scanf("%d%d",&num1,&num2);
+  if(num1>num2)
+  {
+  	printf("%d is big",num1);
+  }	
+  else if(num2>num1)
+  {
+  	printf("%d is big",num2);
+  	
+  }
+  else
+  {
+  	printf("Num1 and num2 are same");
+  }
+}
+=====================================================
+
+2000  500  100
+
+
+4800
+
+
+void main()
+{
+  int amt=0,a=0,b=0,c=0;
+  printf("Enter withdraw amount");
+  scanf("%d",&amt);
+  if(amt%100==0)   // 7800
+  {
+  	   if(amt>=2000)
+  	   {
+  	   	 a=amt/2000;
+  	   	 amt=amt-(a*2000);
+  	   	 printf("2000 rupees notes are: %d \n",a);
+	   }
+	   if(amt>=500)
+	   {
+	   	b=amt/500;
+	   	amt=amt-(b*500);
+	   	printf("500 rupees notes are: %d \n",b);
+	   }
+	   if(amt>=100)
+	   {
+	   	c=amt/100;
+	   	printf("100 rupees notes are: %d \n",c);
+	   }
+  }
+  else
+  {
+  	printf("invalid amount");
+  }
+}
+=====================================================================================
+WAP to accept project marks,internal,external marks from student and 
+genereate certificate with grade.
+
+70% project
+20% external
+10% internal
+
+85%   outstanding
+75--85  excellent
+70--75   Good
+60-70   average 
+50-60  poor 
+
+void main()
+{
+   int project=0,external=0,internal=0;
+   float total=0;
+   printf("Enter project, external and interanl marks");
+   scanf("%d%d%d",&project,&external,&internal);
+   if(project>=50 && external>=50 && internal>=50)
+   {
+   	total=(project*70)/100+(external*20)/100+(internal*10)/100;
+   	printf("Total marks: %f \n",total);
+   	if(total>=85)
+   	{
+   		printf("Outstanding");
+	   }
+	   else if(total>=75)
+	   {
+	   	printf("Excellent");
+	   }
+	   else if(total>=70)
+	   {
+	   	printf("Good");
+	   }
+	   else if(total>=60)
+	   {
+	   	printf("Average");
+	   }
+	   else 
+	   {
+	   	printf("Poor");
+	   }
+   	  
+   }
+   else 
+   {
+   	  if(project<50)
+   	  {
+   	  	printf("student got fail in project and score is : %d\n ",project);		 }
+   	 	 }
+   	 	 if(internal<50)
+   	  {
+   	  	printf("student got fail in internal and score is : %d \n",internal);		 }
+   	  
+		 
+	if(external<50)
+   	  {
+   	  	printf("student got fail in external and score is : %d \n",external);
+			 		 }
+   	  
+		 
+		 
+    
+}
+==================================================================================================
+// wap tp accept number from user and print table 
+void main()
+{
+	int i=0,num=0,result=0;
+	printf("Enter n value");
+	scanf("%d",&num);  
+	for(i=1;i<=10;i++)
+	{
+		result=num*i;
+		printf("%d * %d = %d \n",num,i,result);
+	}
+
+}
+=========================================================================
+// wap to print factors of a given number 
+void main()
+{
+	int i=0,num=0,fc=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fc++;
+			printf("%d \t",i);
+	    }
+	}  
+	printf("\nnumber of factors: %d \n ",fc);
+	
+
+}
+
+==============================================================
+// wap to find prime number or not of a given number 
+void main()
+{
+	int i=0,num=0,fc=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fc++;
+	    }
+	} 
+	if(fc==1)
+	{
+		printf("\n%d is prime number",num);
+	 } 
+	 else
+	 {
+	 	printf("\n%d is not a prime number",num);
+	 }
+	
+
+}
+
+=========================================================
+
+// wap to print factors of a given number 
+void main()
+{
+	int i=0,num=0,fs=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fs=fs+i;
+			printf("%d \t",i);
+	    }
+	} 
+	printf("\nsum of factors: %d ",fs);
+	
+	
+
+}
+
+================================================
+// wap to find perfect number or not of a given number 
+void main()
+{
+	int i=0,num=0,fs=0;
+	printf("Enter num value");
+	scanf("%d",&num);  // 50
+	for(i=1;i<=num/2;i++)
+	{
+	    if(num%i==0)
+		{
+			fs=fs+i;
+			printf("%d \t",i);
+	    }
+	} 
+	if(fs==num)
+	{
+		printf("%d is perfect number",num);
+	}
+	else
+	{
+		printf("%d is not a perfect number",num);
+	}
+	
+
+}
+
+==========================================================
+WAP to accept start and stop values and  print between values
+void main()
+{
+  
+  int start=0,stop=0,i=0;
+  printf("enter start and stop values");
+  scanf("%d%d",&start,&stop);
+  
+  if(start<stop )
+  {
+  	for(i=start+1;i<stop;i++)
+  	{
+  		printf("%d \t",i);
+	  }
+  }
+  else if(start>stop) 
+    {
+  	for(i=start-1;i>=stop-1;i--)
+  	{
+  		printf("%d \t",i);
+	  }
+  }
+  else
+  {
+  	printf("start and stop values are same");
+  }
+  
+}
+========================================================================================
+WAP to accept n values and find max value.
+Enter n value: 5
+
+74  85  24 63 15
+
+void main()
+{
+int n=0,i=0,num=0,max=0;
+printf("Enter n value");
+scanf("%d",&n); //5   
+printf("Enter %d values",n);
+for(i=1;i<=n;i++)    // 74 85 96 12 43 
+{
+	scanf("%d",&num);
+	if(max<num)
+	{
+		max=num;   // 96
+	}
+}
+printf("max : %d",max);
+
+	
+	
+	
+}
+
+======================================================
+// WAP to accept n values and  sum of even numbers and sum of odd numbers
+
+void main()
+{
+	int n=0,esum=0,osum=0,i=0,num=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+     	if(num%2==0)
+     	{
+     		esum=esum+num;
+		 }
+		 else
+		 {
+		 	osum=osum+num;
+		 }
+	 }
+	 printf("Sum of even numbers :%d \n",esum);
+	 printf("Sum of odd numbers :%d \n",osum);	
+}
+==============================================
+// WAP to accept n values and  sum of even numbers and sum of odd numbers
+
+void main()
+{
+	int n=0,ecount=0,ocount=0,i=0,num=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+     	if(num%2==0)
+     	{
+     		ecount++;
+		 }
+		 else
+		 {
+		 	ocount++;
+		 }
+	 }
+	 printf("number of even numbers :%d \n",ecount);
+	 printf("number of odd numbers :%d \n",ocount);	
+}
+===============================================================
+WAP to find avg of given numbers
+void main()
+{
+	int n=0,i=0,num=0,sum=0;
+	float avg=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+        sum=sum+num;
+     
+	 }
+	 avg=sum/n;
+	 printf("average value: %f ",avg);
+	
+}
+===============================================================
+
+WAP to accept n values and find avg value of even elemnets and 
+avg value of odd elements
+void main()
+{
+	int n=0,i=0,num=0,esum=0,osum=0,ecount=0,ocount=0;
+	float eavg=0,oavg=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+     for(i=1;i<=n;i++)
+     {
+     	scanf("%d",&num);
+        if(num%2==0)
+        {
+        	esum=esum+num;
+              ecount++;
+		}
+		else 
+		{
+			osum=osum+num;
+			ocount++;
+		}
+     
+	 }
+	 eavg=esum/ecount;
+	 oavg=osum/ocount;
+	 
+	 printf("average value of even elements: %f ",eavg);
+	 printf("average value of odd elements: %f ",oavg);	
+}
+============================================================================
+void main()
+{
+	int amt=0,a=0,b=0,c=0,rem=0;
+	printf("Enter withdraw amount");
+	scanf("%d",&amt);
+	if(amt%100==0)   // 500 200 100    600
+ 	{
+ 		if(amt>=500)
+ 		{
+		 
+		a=amt/500;
+		amt=amt-(a*500);
+		printf("500 rupees notes are : %d \n",a);
+	    }
+	    if(amt>=200)
+	    {
+	    	b=amt/200;
+	    	amt=amt-(b*200);
+	    	printf("200 rupees notes are : %d \n",b);
+	    }
+	    	
+		 if(amt>=100)
+	    {
+	    	c=amt/100;
+	    	printf("100 rupees notes are : %d \n",c);
+	    }
+		
+	}
+	else
+	{
+             rem=amt%100;  // 180   80 
+			 if(rem<50)
+			 {
+			 	  amt=amt-rem;  
+	          printf("%d ",amt);
+			  }
+			  else 
+			  {
+			  	   amt=(amt-rem)+100;
+			  	   printf("%d ",amt);
+			   }       	  
+	}
+}
+=========================================================================
+
+
+void add()
+{
+	int a=90,b=10,c=0;
+	c=a+b;
+	
+	printf("Addition is: %d \n",c);
+	sub();
+}
+void sub()
+{
+	int x=20,y=10,z=0;
+	z=x-y;
+	printf("sub : %d \n",z);
+	
+}
+void main()
+{
+	add();
+	
+}
+===================================================
+int a=100,b=20,c=0;
+void add()
+{
+	c=a+b;
+	printf("Addition is: %d \n",c);
+	sub();
+}
+void sub()
+{
+	c=a-b;
+	printf("sub : %d \n",c);
+	
+}
+void main()
+{
+	add();
+	
+}
+=========================================================================
+WAP to find armstrong number or not for a given number
+void main()
+{
+	int num=0,digits=0,temp=0,rem=0,sum=0;
+	printf("Enter number to check armstrong number or not");
+	scanf("%d",&num);  // 153
+	temp=num;
+	while(num!=0)
+	{
+		num=num/10;
+		digits++;
+	}
+	num=temp;
+
+   while(num!=0)
+   {
+   	   rem=num%10;  // 1
+   	   sum=sum+pow(rem,digits);  
+   	   num=num/10;  // 1
+   }
+   num=temp;
+   if(sum==num)
+   {
+   	printf("%d is armstrong number",num);
+   }
+   else
+   {
+   	printf("%d is not a armstrong number",num);
+   }
+	
+}
+=====================================================================
+WAP to find factorial of a given number
+void main()
+{
+	int num=0,i=1,fact=1;
+	printf("Enter number to find factorial"); //4
+	scanf("%d",&num);
+	while(i<=num)
+	{
+       fact=fact*i;		
+ 		i++;
+	}
+	printf("Factorial of %d is %d ",num,fact);
+}
+========================================================
+// WAP to check given number is strong number or not.
+void main()
+{
+	int num=0,sum=0,rem=0,fact=1,i=1,temp=0;
+	printf("Enter number to check strong number or not");
+	scanf("%d",&num);  // 145
+	temp=num;
+	while(num!=0)
+	{
+		rem=num%10;  // 4
+		 for(i=1;i<=rem;i++)
+		 {
+		   fact=fact*i; 	
+		 }
+		 sum=sum+fact;
+		 fact=1;
+		 num=num/10;
+	}
+	num=temp;
+	if(sum==num)
+	{
+		printf("%d is strong number",num);
+	}
+	else
+	{
+		printf("%d is not a strong number",num);
+	}
+}
+=====================================================================================
+WAP to print 1 to n armstrong numbers
+void main()
+{
+	int n=0,i=1,temp=0,digits=0,rem=0,sum=0;
+	printf("Enter n value");
+	scanf("%d",&n);  //500
+	
+	while(i<=n)         // i=1  temp=1
+	{
+		temp=i;    
+		while(i!=0)
+		{
+			i=i/10;
+			digits++;
+		}
+		i=temp;     // 1
+		while(i!=0)
+		{
+			rem=i%10;  
+			sum=sum+pow(rem,digits);
+			i=i/10;
+		}
+		i=temp;
+		if(sum==i)
+		{
+			printf("%d \t",i);
+		}
+		sum=0;
+		digits=0;  
+		
+		i++;
+	}
+}
+======================================================================================
+WAP to check palindrome or not
+void main()
+{
+	int num=0,reverse=0,rem=0,temp=0;
+	printf("Enter number");
+	scanf("%d",&num);
+	temp=num;
+	while(num!=0)
+	{
+		 rem=num%10;  //5
+		 reverse=reverse*10+rem;  //3265
+		 num=num/10;  //5
+	  }  
+	  num=temp;
+	  if(num==reverse)
+	  {
+	  	printf("%d is palindrom number",num);
+	  }
+	  else
+	  {
+	  	printf("%d is not a palindrom number",num);
+	  }
+	  
+}
+===========================================================================================
+WAP to find max,min,and avg in an array
+void main()
+{
+     int marks[100];
+     int i=0,n=0,max=0,sum=0,min=0;
+     float avg=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);   
+     	if(max<marks[i])
+     	{
+     		max=marks[i];
+     		
+		 }
+		 
+		 sum+=marks[i];
+	 }
+	 min=marks[0];     //  min=74
+	 for(i=1;i<n;i++)     //74 85 96 32 41 52
+	 {
+	 	if(min>marks[i])
+	 	{
+	 		min=marks[i];
+		 }
+	 }
+	 
+	 
+	 
+	 avg=sum/n;
+	 printf("MAX value: %d \n",max);
+	 printf("Sum value: %d \n",sum);	 
+	 printf("Avg value: %f \n",avg);     
+      printf("Min value: %d \n",min);     
+}
+==================================================================
+WAP accept n values and search element.
+
+void main()
+{
+     int marks[100],flag=0;
+     int i=0,n=0,search=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);   
+   	 }
+   	 printf("Enter search element");
+   	 scanf("%d",&search);
+	 
+	 for(i=0;i<n;i++)
+	 {
+	 
+     	 if(search==marks[i])
+	     {
+	     	  flag=1;
+	      }
+	      
+     }   
+     if(flag==1)
+     {
+     	printf("Yes");
+	 }
+	 else
+	 {
+	 	printf("No");
+	 }
+
+
+===================================================================
+void main()
+{
+     int marks[100],fr=0;
+     int i=0,n=0,search=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);   
+   	 }
+   	 printf("Enter search element");
+   	 scanf("%d",&search);
+	 
+	 for(i=0;i<n;i++)
+	 {
+	   if(search==marks[i])
+	   {
+	   	fr++;
+	   }
+   	 }
+		printf("%d frequency is %d ",search,fr);   
+}
+=====================================================================
+void main()
+{
+     int marks[100],fr=1,i=0,n=0,j=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]==marks[j])
+			 {
+			 	fr++;
+			 	marks[j]=0;
+			  } 
+			
+          }
+          if(marks[i]!=0)
+          {
+		  
+          printf("%d : %d \n",marks[i],fr);
+	}
+			fr=1;
+ }
+	   
+}
+
+=======================================
+WAP to find duplicate elementes in array
+void main()
+{
+     int marks[100],fr=1,i=0,n=0,j=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]==marks[j])
+			 {
+			 	fr++;
+			 	marks[j]=0;
+			  } 
+			
+          }
+          if(marks[i]!=0 && fr>1)
+          {
+		  
+          printf("%d : %d \n",marks[i],fr);
+	}
+			fr=1;
+ }
+	   
+}
+=======================================================
+WAP to find unique elementes in array
+void main()
+{
+     int marks[100],fr=1,i=0,n=0,j=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]==marks[j])
+			 {
+			 	fr++;
+			 	marks[j]=0;
+			  } 
+			
+          }
+          if(marks[i]!=0 && fr==1)
+          {
+		  
+          printf("%d : %d \n",marks[i],fr);
+	}
+			fr=1;
+ }
+	   
+}
+========================================================================
+ WAP to print in ascending order
+void main()
+{
+     int marks[100],i=0,n=0,j=0,temp=0;
+     printf("Enter n value");
+     scanf("%d",&n);
+     printf("Enter %d values",n);
+     for(i=0;i<n;i++)
+     {
+     	scanf("%d",&marks[i]);    //41 52 63 52 41 41 52 78   
+   	 }
+   	 for(i=0;i<n;i++)
+   	 {
+   	 	for(j=i+1;j<n;j++)
+   	 	{
+			
+	   	  if(marks[i]<marks[j])
+			 {
+			 	temp=marks[i];
+			 	marks[i]=marks[j];
+			 	marks[j]=temp;
+			  } 
+			
+          }
+         }
+         for(i=0;i<n;i++)
+         {
+         	printf("%d\t",marks[i]);
+		 }
+	   
+}
+==================================================================================
+WAP to split one array into two arrays
+void main()
+{
+	int values[100],n=0,i=0,even[100],odd[100],x=0,y=0;
+	printf("Enter n value");
+	scanf("%d",&n);
+	printf("Enter %d values",n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&values[i]);  //74 85 96 14 25 36 25 75
+ 
+	    if(values[i]%2==0)
+	    {
+	    	even[x]=values[i];
+	    	x++;
+		}
+		else
+		{
+			odd[y]=values[i];
+			y++;
+		}
+   }
+   printf("Even Array values: \n");
+   for(i=0;i<x;i++)
+   {
+   	printf("%d \t",even[i]);
+   }
+      printf("\nOdd Array values: \n");
+   for(i=0;i<y;i++)
+   {
+   	printf("%d \t",odd[i]);
+   }
+   
+}
+===============================================================================
+delete an element in an array if exsits
+void main()
+{
+	int values[100],n=0,i=0,search=0,pos=-1;
+	printf("Enter n value");             //  search  pos
+		scanf("%d",&n);
+		printf("Enter %d values",n);
+		for(i=0;i<n;i++)
+		{
+			scanf("%d",&values[i]);
+		}
+		printf("Enter search value");  // [74 85 96 25 14 36 ]
+		scanf("%d",&search);
+		for(i=0;i<n;i++)
+		{
+			 if(search==values[i])      // 85 
+			 {
+			 	  pos=i; 
+			 }
+	  }
+        
+        if(pos!=-1)
+        {
+		
+        for(i=pos;i<n;i++)
+        {
+        	values[i]=values[i+1];
+		}
+		for(i=0;i<n-1;i++)
+		{
+			printf("%d \t",values[i]);
+		}
+	   }
+	   else
+	   {
+	   	
+		for(i=0;i<n;i++)
+		{
+			printf("%d \t",values[i]);
+		}
+
+       }
+}
+=====================================================================================
+WAp to check given string is paindrome or not
+void main()
+{
+	char name[100];
+	int i,flag=0;
+	puts("Enter name");
+	gets(name);
+	
+	for(i=0;i<strlen(name);i++)
+	{
+		if(name[i]==name[strlen(name)-i-1])
+		{
+			flag++;
+		   continue;
+		}
+		else
+		{
+			break;
+		}
+	}
+	if(flag==strlen(name))
+	{
+	   printf("palindrom");	
+	}
+	else
+	{
+		printf("not a palindrome");
+	}
+}
+=========================================================================================
+bank validations:
+#include<iostream>
+void numberofnotes();
+using namespace std;
+int pc=1,acbal,wcount=1;
+void balance()
+{
+	cout<<acbal<<"\n";
+}
+void deposite()
+{
+	int amt=0;
+	cout<<"enter deposite amount";
+	cin>>amt;
+	if(amt%100==0)
+	{
+		acbal=acbal+amt;
+		cout<<acbal<<"\n";
+	}
+}
+void amount(int amt)
+{
+	int a=0,b=0,c=0,rem=0,decision,temp;
+		temp=amt;
+	if(amt<=acbal)
+	{
+		wcount++;
+	if(amt%100==0)
+	{
+		if(amt>=2000)
+		{
+			a=amt/2000;
+			amt=amt-(a*2000);
+			cout<<"no.of 2000 notes="<<a<<"\n";
+		}
+		 if(amt>=500)
+		{
+			b=amt/500;
+			amt=amt-(b*500);
+			cout<<"no.of 500 notes="<<b<<"\n";
+		}
+		 if(amt>=100)
+		{
+			c=amt/100;
+			cout<<"no.of 100 notes="<<c<<"\n";
+		}
+		amt=temp;
+		acbal=acbal-amt;
+		cout<<"account balance"<<acbal<<"\n";
+	}
+}
+}
+void numberofnotes()
+{
+	int amt=0,a=0,b=0,c=0,rem=0,decision,temp;
+	cout<<"enter amount";
+	cin>>amt;
+	temp=amt;
+	if(amt<=acbal)
+	{
+		wcount++;
+	if(amt%100==0)
+	{
+		if(amt>=2000)
+		{
+			a=amt/2000;
+			amt=amt-(a*2000);
+			cout<<"no.of 2000 notes="<<a<<"\n";
+		}
+		 if(amt>=500)
+		{
+			b=amt/500;
+			amt=amt-(b*500);
+			cout<<"no.of 500 notes="<<b<<"\n";
+		}
+		 if(amt>=100)
+		{
+			c=amt/100;
+			cout<<"no.of 100 notes="<<c<<"\n";
+		}
+		amt=temp;
+		acbal=acbal-amt;
+		cout<<"account balance"<<acbal<<"\n";
+	}
+	else
+	{
+		rem=amt%100;
+		if(rem<50)
+		{
+			amt=amt-rem;
+			cout<<amt;
+			cout<<"enter 1 or 2\n";
+			cin>>decision;
+			if(decision==1)
+			{
+				amount(amt);
+			}
+			else
+			{
+			   amount(amt);
+			}
+		}
+		else
+		{
+			rem=amt%100;
+			amt=(amt-rem)+100;
+			cout<<amt;
+			cout<<"enter 1 or 2\n";
+			cin>>decision;
+				if(decision==1)
+			{
+				amount(amt);
+			}
+			else
+			{
+				amount(amt);
+			}
+		}
+	}
+ }
+}
+void withdraw()
+{
+	numberofnotes();
+}
+void options()
+{
+	int opt;
+	cout<<1<<".balance enqiry\n";
+	cout<<2<<".withdrawl\n";
+	cout<<3<<".deposite\n";
+	cout<<4<<".exit\n";
+	cout<<"enter option";
+	cin>>opt;
+	if(opt==1)
+	{
+		balance();
+		options();
+	}
+	else if(opt==2)
+	{
+		if(wcount<=3)
+		{
+		withdraw();
+		options();
+	    }
+	    else
+	    {
+	    	cout<<"your card limit is over for today";
+	    	options();
+		}
+	}
+	else if(opt==3)
+	{
+		deposite();
+		options();
+	}
+	else
+	{
+		cout<<"THANK YOU";
+	}
+}
+void validate()
+{
+    int pin=0;
+	cout<<"enter pin";
+	cin>>pin;
+	if(pin==6958)
+	{
+		options();
+	}
+	else
+	{
+		cout<<"invalid pin,try again\n";
+		pc++;
+		if(pc<=3)
+		{
+			validate();
+		}
+		else
+		{
+			cout<<"your card is blocked for 24hrs";
+		}
+	}
+}
+int main()
+{
+	validate();
+	return 0;
+}
+================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
