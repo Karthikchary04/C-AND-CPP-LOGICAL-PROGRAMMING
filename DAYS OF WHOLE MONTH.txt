@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+void ddmmyy(int date,int month,int year)
+{
+	int i,sum=0,years,num=0;
+	if((month==4 || month==6 || month==9 || month==11) && date>=1 && date<=30)
+	{
+		cin>>date>>month>>year;
+	}
+	else if(((month==1 || month==3 || month==5 || month==7 || month==8 || month==10 || month==12) && date>=1 && date<=31))
+	{
+		cin>>date>>month>>year;
+	}
+	else if(month==2 && year%4==0 || year%400==0 )
+	{
+		cin>>date>>month>>year;
+	}
+	int months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+	for(i=0;i<month-1;i++)
+	{
+		sum=sum+months[i];
+	}
+	sum=sum+date;
+	if(year%4==0 && year%400==0)
+	{
+		sum=sum+1;
+	}
+	years=(year+(year-1)/4+(year-1)/400+sum-(year-1)/100)%7;
+	string days[7]={"saturday","sunday","monday","tuesday","wednessday","thursday","friday"};
+    cout<<date<<"\t"; 
+    cout<<days[years]<<"\n";
+    date++;
+	if(date>=1 && date<=29 && (year%4==0 || year%400==0))
+    {
+    	ddmmyy(date,month,year);
+	}
+	else if(date>=1 && date<=31)
+    {
+    	ddmmyy(date,month,year);
+	}
+	else if(date>=1 && date<=30)
+	{
+		ddmmyy(date,month,year);
+	}
+}
+int main()
+{
+	int month,year;
+	cout<<"enter month and year";
+	cin>>month>>year;
+    ddmmyy(1,month,year);
+}
