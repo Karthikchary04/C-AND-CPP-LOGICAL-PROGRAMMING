@@ -1,0 +1,270 @@
+#include<iostream>
+using namespace std;
+void amount(int amt,int acbal)
+{
+	int a=0,b=0,c=0,rem=0,decision,temp,wcount=0;
+		temp=amt;
+	if(amt<=acbal)
+	{
+		wcount++;
+	if(amt%100==0)
+	{
+		if(amt>=2000)
+		{
+			a=amt/2000;
+			amt=amt-(a*2000);
+			cout<<"no.of 2000 notes="<<a<<"\n";
+		}
+		 if(amt>=500)
+		{
+			b=amt/500;
+			amt=amt-(b*500);
+			cout<<"no.of 500 notes="<<b<<"\n";
+		}
+		 if(amt>=100)
+		{
+			c=amt/100;
+			cout<<"no.of 100 notes="<<c<<"\n";
+		}
+		amt=temp;
+		acbal=acbal-amt;
+		cout<<"account balance"<<acbal<<"\n";
+	}
+}
+}
+void numberofnotes(int acbal)
+{
+	int amt=0,a=0,b=0,c=0,rem=0,decision,temp,wcount=0;
+	cout<<"enter amount";
+	cin>>amt;
+	temp=amt;
+	if(amt<=acbal)
+	{
+		wcount++;
+	if(amt%100==0)
+	{
+		if(amt>=2000)
+		{
+			a=amt/2000;
+			amt=amt-(a*2000);
+			cout<<"no.of 2000 notes="<<a<<"\n";
+		}
+		 if(amt>=500)
+		{
+			b=amt/500;
+			amt=amt-(b*500);
+			cout<<"no.of 500 notes="<<b<<"\n";
+		}
+		 if(amt>=100)
+		{
+			c=amt/100;
+			cout<<"no.of 100 notes="<<c<<"\n";
+		}
+		amt=temp;
+		acbal=acbal-amt;
+		cout<<"account balance"<<acbal<<"\n";
+	}
+	else
+	{
+		rem=amt%100;
+		if(rem<50)
+		{
+			amt=amt-rem;
+			cout<<amt;
+			cout<<"enter 1 or 2\n";
+			cin>>decision;
+			if(decision==1)
+			{
+				amount(amt,acbal);
+			}
+			else
+			{
+			   amount(amt,acbal);
+			}
+		}
+		else
+		{
+			rem=amt%100;
+			amt=(amt-rem)+100;
+			cout<<amt;
+			cout<<"enter 1 or 2\n";
+			cin>>decision;
+				if(decision==1)
+			{
+				amount(amt,acbal);
+			}
+			else
+			{
+				amount(amt,acbal);
+			}
+		}
+	}
+ }
+}
+void FixedDeposit()
+{
+	int amt,years,acbal,intrest;
+	cout<<"enter amount to deposit ";
+	cin>>amt;
+	cout<<"amount deposited ";
+	acbal=amt;
+	cout<<"your account balance is:"<<acbal<<endl;
+	cout<<"enter years";
+	cin>>years;
+	if(amt<100000)
+	{
+	if(years>=0 && years<=2)
+	intrest=(amt*4.5*years)/100;
+	else if(years>=3 && years<=5)
+	intrest=(amt*5*years)/100;
+	else if(years>=6 && years<=10)
+	intrest=(amt*6*years)/100;
+	else if(years>10)
+	{
+	intrest=(amt*7*years)/100;
+    }
+    cout<<"intrest is:"<<intrest;
+	acbal=acbal+intrest;
+	cout<<acbal;
+    }
+    else if(amt>=100000)
+	{
+	if(years>=0 && years<=2)
+	intrest=(amt*5*years)/100;
+	else if(years>=3 && years<=5)
+	intrest=(amt*6*years)/100;
+	else if(years>=6 && years<=10)
+	intrest=(amt*6.5*years)/100;
+	else if(years>10)
+	{
+	intrest=(amt*7.5*years)/100;
+    }
+    cout<<"intrest is:"<<intrest;
+	acbal=acbal+intrest;
+	cout<<acbal;
+    }
+}
+void SalaryAccount()
+{
+	int amt,years,acbal,intrest,wcount=0,opt;
+	cout<<"enter amount to deposit ";
+	cin>>amt;
+	cout<<"amount deposited ";
+	acbal=amt;
+	cout<<"your account balance is:"<<acbal<<endl;
+	if(opt==1)
+	{
+		if(wcount<=3)
+		numberofnotes(acbal);
+		else
+		cout<<"your limit is over for the day"<<endl;
+	}
+	else
+	{
+	cout<<"enter years to check your account balance after intrest of 2% ";
+	cin>>years;
+	intrest=(amt*2*years)/100;
+	cout<<"intrest is:"<<intrest<<endl;
+	acbal=acbal+intrest;
+	cout<<acbal;
+    }
+}
+void SavingsAccount(int age)
+{
+	int amt,years,acbal,intrest,opt,wcount;
+	cout<<"enter amount to deposit ";
+	cin>>amt;
+	cout<<"amount deposited ";
+	acbal=amt;
+	cout<<"your account balance is:"<<acbal<<endl;
+	cout<<"enter option\n 1. withdraw cash\n 2.check intrest ";
+	cin>>opt;
+	if(opt==1)
+	{
+		if(wcount<=3)
+		numberofnotes(acbal);
+		else
+		cout<<"your limit is over for the day"<<endl;
+	}
+	else if(opt==2)
+	{
+	cout<<"enter years to check your account balance after intrest of 4% ";
+	cin>>years;
+	if(age<60)
+	{
+	intrest=(amt*4*years)/100;
+	cout<<intrest;
+	acbal=acbal+intrest;
+	cout<<acbal;
+    }
+    else
+    {
+    intrest=(amt*5*years)/100;
+	cout<<intrest;
+	acbal=acbal+intrest;
+	cout<<acbal;
+	}
+    }
+}
+void AccountType(int actype,int pin,int acno,int age)
+{
+	int eacno,epin;
+	if(actype==1)
+	{
+		cout<<"enter your pin";
+		cin>>epin;
+		cout<<"enter your acount number";
+		cin>>eacno;
+		if(epin==pin && acno==eacno)
+		SavingsAccount(age);
+		else
+		cout<<"incorrect pin or acno";
+	}
+	else if(actype==2)
+	{
+		cout<<"enter your pin";
+		cin>>epin;
+		cout<<"enter your acount number";
+		cin>>eacno;
+		if(epin==pin && acno==eacno)
+		SalaryAccount();
+		else
+		cout<<"incorrect pin or acno";
+	}
+	else if(actype==3)
+	{
+		cout<<"enter your pin";
+		cin>>epin;
+		cout<<"enter your acount number";
+		cin>>eacno;
+		if(epin==pin && acno==eacno)
+		FixedDeposit();
+		else
+		cout<<"incorrect pin or acno";
+	}
+}
+void details()
+{
+	string name;
+	int acno,pin,actype,age;
+	cout<<"OPEN ACCOUNT\n";
+	cout<<"enter name ";
+	getline(cin,name);
+	cout<<"enter your age";
+	cin>>age;
+	cout<<"create account number ";
+	cin>>acno;
+	cout<<"create pin ";
+	cin>>pin;
+	cout<<"enter account type\n";
+	cout<<"1.SAVINGS ACCOUNT\n";
+	cout<<"2.SALARY ACCOUNT\n";
+	cout<<"3.FIXED DEPOSIT\n";
+	cin>>actype;
+	AccountType(actype,pin,acno,age);
+}
+int main()
+{
+	details();
+	return 0;
+}
